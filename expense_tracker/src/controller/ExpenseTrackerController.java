@@ -1,13 +1,11 @@
 package controller;
 
-import view.ExpenseTrackerView;
-
 import java.util.List;
-
-
 
 import model.ExpenseTrackerModel;
 import model.Transaction;
+import model.TransactionFilter;
+import view.ExpenseTrackerView;
 public class ExpenseTrackerController {
   
   private ExpenseTrackerModel model;
@@ -46,4 +44,9 @@ public class ExpenseTrackerController {
   }
   
   // Other controller methods
+  public void applyFilter(TransactionFilter filter) {
+    List<Transaction> transactions = model.getTransactions();
+    List<Transaction> filteredTransactions = filter.filter(transactions);
+    view.highlightTransactions(filteredTransactions);
+  }
 }
