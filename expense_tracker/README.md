@@ -19,3 +19,9 @@ This code is compiled with ```openjdk 17.0.7 2023-04-18```. Please update your J
 ## Initial Build
 - Initial build with ant
 - produced jdocs
+
+## ExpenseTrackerModel.java
+- Encapsulation and immutability of transaction list
+
+## Transaction.java
+- Encapsulation and immutability of transaction list
